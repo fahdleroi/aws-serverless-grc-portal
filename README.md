@@ -15,6 +15,23 @@ The application is built using a modern decoupled approach:
 
 ![Architecture Diagram](./images/AWS%20CRUD%20APIGATEWAY%20ARCHI.png)
 
+## 📊 CloudWatch Monitoring & Proof of Work
+Native monitoring validates the end-to-end execution of the architecture.
+
+### 📈 Execution Logs (Traffic Volume)
+This graph shows the **IncomingLogEvents** for our Lambda functions, proving that requests are correctly routed from the API to the backend.
+![Incoming log events](./images/Incoming%20log%20event.PNG)
+
+### ⏱️ Performance (Backend Latency)
+This metric confirms an average execution **Latency** of **291ms**, ensuring a fast and responsive GRC dashboard.
+![Latency Average](./images/latency.PNG)
+
+## 📂 Repository Structure
+* `/frontend`: UI source code (HTML5/JS/CSS).
+* `/backend`: Python logic for microservices.
+* `/images`: Architecture diagrams and CloudWatch evidence.
+* `api-spec.json`: OpenAPI/Swagger definition of the API Gateway.
+
 ## 🔐 Security & Governance (IAM)
 Following the **Principle of Least Privilege**, each microservice is isolated. Below is the JSON structure applied to the `DeleteTodoFunction` role, restricting access ONLY to the delete action on our specific table:
 
