@@ -1,5 +1,7 @@
 # 🛡️ AWS Serverless GRC & Security Control Center
 
+> 🔗 **Live Demo:** [GRC Cybersecurity Portal](http://grc-fahd-portal-2026.s3-website.eu-west-3.amazonaws.com)
+> 
 ## 📌 Project Overview
 This project demonstrates the implementation of a **100% Serverless** microservices architecture on AWS. It is a Governance, Risk, and Compliance (GRC) portal designed to track security remediation actions, including Pentest findings, Cloud Configuration Audits, and Business Continuity Plans (BCP/PRA).
 
