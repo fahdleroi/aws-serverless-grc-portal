@@ -7,7 +7,7 @@ The goal is to validate core Cloud Architect concepts: decoupling, automatic sca
 
 ## 🏗️ Technical Architecture
 The application is built using the following AWS Managed Services:
-
+![Architecture Diagram](./docs/architecture.png)
 * **Frontend:** Web interface hosted on **Amazon S3** (Static Website Hosting).
 * **API Layer:** **Amazon API Gateway** (REST API) acting as a single entry point.
 * **Compute (Microservices):** 4 **AWS Lambda** functions (Python 3.12) handling CRUD operations.
