@@ -16,10 +16,7 @@ The application is built using a modern decoupled approach:
 ![Architecture Diagram](./images/AWS%20CRUD%20APIGATEWAY%20ARCHI.png)
 
 ## 🔐 Security & Governance (IAM)
-Following the **Principle of Least Privilege**, each microservice is isolated.
-
-### 🛡️ IAM Policy Evidence
-Below is the JSON structure applied to the `DeleteTodoFunction` role, restricting access ONLY to the delete action on our specific table:
+Following the **Principle of Least Privilege**, each microservice is isolated. Below is the JSON structure applied to the `DeleteTodoFunction` role, restricting access ONLY to the delete action on our specific table:
 
 ```json
 {
