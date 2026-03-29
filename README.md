@@ -31,6 +31,25 @@ This metric confirms an average execution **Latency** of **291ms**, ensuring a f
 * `/backend`: Python logic for microservices.
 * `/images`: Architecture diagrams and CloudWatch evidence.
 * `api-spec.json`: OpenAPI/Swagger definition of the API Gateway.
+### 🛡️ IAM Policy Evidence (Least Privilege)
+To ensure security compliance, each Lambda function uses a restricted policy. Below is the JSON structure applied to the `DeleteTodoFunction` role, allowing ONLY the delete action on our specific table:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "dynamodb:DeleteItem",
+            "Resource": "arn:aws:dynamodb:eu-west-3:*:table/Todos"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:eu-west-3:*:*"
+        }
+    ]
+}
 
 ---
 *Project developed as part of the AWS Solutions Architect Certification - 2026.*
